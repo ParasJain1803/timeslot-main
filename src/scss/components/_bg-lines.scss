@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+
+.bg-lines {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  padding: 0vw 6.5vw;
+
+  &__line {
+    width: 0.063rem;
+    height: 100%;
+    background-color: $line-color;
+  }
+}

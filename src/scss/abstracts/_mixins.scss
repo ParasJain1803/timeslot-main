@@ -1,0 +1,26 @@
+@mixin set-width($width) {
+  width: #{$width}rem;
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin align-center() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-start() {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin flex-end() {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}

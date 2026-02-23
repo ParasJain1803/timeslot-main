@@ -1,0 +1,106 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.navbar {
+  @include align-center;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  right: -14.625rem;
+  flex-direction: row-reverse;
+  transform: rotate(-90deg);
+  gap: 5rem;
+  font-family: $font-proxima;
+
+  @media (max-width: 1024px) {
+    z-index: 12;
+    position: relative;
+    top: 0;
+    padding: 0rem 1.25rem;
+    flex-direction: row;
+    transform: none;
+    right: 0;
+  }
+
+  &__primary,
+  &__secondary {
+    display: flex;
+    list-style: none;
+  }
+
+  &__primary {
+    font-size: 0.875rem;
+    font-weight: 700;
+    gap: 2.25rem;
+    text-transform: uppercase;
+
+    @media (max-width: 1024px) {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 1.5rem;
+      color: $white;
+    }
+  }
+
+  &__secondary {
+    color: $nav-text-color;
+    font-size: 0.688rem;
+    font-weight: 400;
+    gap: 1.25rem;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+.nav-scroll {
+  @include align-center;
+  position: absolute;
+  bottom: 4.5rem;
+  left: 6rem;
+  background-color: $nav-color;
+  height: 1px;
+  @include set-width(18.5);
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  &__pin {
+    background-color: $white;
+    height: 2px;
+    @include set-width(3);
+  }
+}
+
+.app-download {
+  z-index: 12;
+  position: absolute;
+  bottom: 0;
+  padding: 0 0 6rem 6rem;
+
+  @media (max-width: 1024px) {
+    z-index: 10;
+    left: 10%;
+    padding: 0;
+    bottom: 0;
+  }
+
+  &__links {
+    color: $white;
+    text-decoration: none;
+
+    &--apple,
+    &--android {
+      @include set-width(9.25);
+      cursor: pointer;
+    }
+
+    &--apple {
+      margin-right: 0.5rem;
+    }
+  }
+}
